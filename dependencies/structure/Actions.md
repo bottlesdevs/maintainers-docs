@@ -140,7 +140,57 @@ to a bottle folder, **hardscripting this will result in a rejection by the team.
   dest: temp/directx_Jun2010_redist/
 ```
 
+## `get_from_cab`
+This action is used to extract a file from a Windows Cabinet.
 
+### Parameters
+| Key | Description |
+| --- | ----------- |
+| `source` | The path to the Windows Cabinet file |
+| `file_name` | The file to be extracted (support wildcards) |
+| `dest` | The destination folder where the files will be extracted, Bottles will automatically create it if does not exist |
 
+#### Supported `dest` values
+The destination should start with one of the following placeholders:
+
+| Placeholder | Description |
+| ----------- | ----------- |
+| temp/ | Will be automatically replaced with the full path to the Bottles' temp directory |
+| win64/ | Will be automatically replaced with the full path to the windows/ system 64bit folder of the running bottle |
+| win32/ | Will be automatically replaced with the full path to the windows/ system 32bit folder of the running bottle |
+
+> **Note**: The `win64` and `win32` placeholders are extremely important, as 
+> they change according to the bottle's architecture. Windows (and WINE) 32bit 
+> use the system32 folder to store 32bit resources and syswow64 to store 64bit,
+> while Windows (and WINE) 64bit uses the system32 folder to store 64bit 
+> resources and syswow64 to store 32bit.
+
+If the destination does not start with one of the supported placeholders, it
+will fail with an error. It is not possible to extract a whole Windows Cabinet
+to a bottle folder, **hardscripting this will result in a rejection by the team.**
+
+### Example
+```yaml
+- action: get_from_cab
+  source: directx_Jun2010_redist.exe
+  file_name: Jun2010_D3DCompiler_43_x86.cab
+  dest: temp/d3dcompiler_43_x86/
+```
+
+example using the `win64` and `win32` placeholders:
+
+```yaml
+- action: get_from_cab
+  source: d3dcompiler_43_x86/Jun2010_D3DCompiler_43_x86.cab
+  file_name: D3DCompiler_43.dll
+  dest: win32
+  rename: d3dcompiler_43.dll
+
+- action: get_from_cab
+  source: d3dcompiler_43_x64/Jun2010_D3DCompiler_43_x64.cab
+  file_name: D3DCompiler_43.dll
+  dest: win64/
+  rename: d3dcompiler_43.dll
+```
 
 > This page is not complete.
