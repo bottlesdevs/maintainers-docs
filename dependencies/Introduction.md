@@ -93,14 +93,14 @@ Steps:
 
 Here we have five steps with different actions:
 - `uninstall`: will uninstall the Wine Mono package as this dependency
-  will replace it.
+  will replace it
 - `set_windows`: will set the Wine environment to Windows 7, as the
   dependency will fail on different versions of Windows
 - `install_exe`: will download the file and run it
 - `set_windows`: will set the Wine environment back to Windows 10 (the
   default one in Bottles)
 - `override_dll`: will override the `mscoree` DLL to `native` so the program
-  will find it.
+  will find it
 
 You can see that the `install_exe` action has multiple keys:
 - `environment`: will inject an environment variable registering the
