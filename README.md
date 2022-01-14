@@ -19,3 +19,4 @@ These documents explain how to write, test and submit new dependencies to Bottle
 - [Structure](/dependencies/structure/README.md)
     - [Actions](/dependencies/structure/Actions.md)
     - [Validation](/dependencies/structure/Validation.md)
+- [Testing](/dependencies/Testing.md)
