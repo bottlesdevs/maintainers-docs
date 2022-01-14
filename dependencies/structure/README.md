@@ -4,10 +4,10 @@ will go more in depth and explain the different parts of the dependency.
 
 ## Manifest
 This file is the way we instruct Bottles to install the dependency, it is very
-important that it is written well and that you do not use wrong instructions 
-that can dirty Bottles temp folder or, worse, the user's bottles (this it 
-should never happen and is why every dependency needs to be reviewed by the 
-team before being deployed).
+important that it is well written and that you do not use wrong instructions 
+that can dirty Bottles temp folder or, worse, the user's bottles (this should 
+never happen and is why every dependency needs to be reviewed by the team
+before being deployed).
 
 Each manifest has two parts:
 - header
