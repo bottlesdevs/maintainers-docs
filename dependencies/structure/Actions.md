@@ -161,9 +161,8 @@ The destination should start with one of the following placeholders:
 
 > **Note**: The `win64` and `win32` placeholders are extremely important, as 
 > they change according to the bottle's architecture. Windows (and WINE) 32bit 
-> use the system32 folder to store 32bit resources and syswow64 to store 64bit,
-> while Windows (and WINE) 64bit uses the system32 folder to store 64bit 
-> resources and syswow64 to store 32bit.
+> use the system32 folder to store 32bit resources, while 64bit systems uses 
+> the system32 folder to store 64bit resources and syswow64 to store 32bit.
 
 If the destination does not start with one of the supported placeholders, it
 will fail with an error. It is not possible to extract a whole Windows Cabinet
