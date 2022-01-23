@@ -43,6 +43,7 @@ to the Bottles' temp folder.
 This action is used to install an executable.
 
 ### Parameters
+
 | Key | Description |
 | --- | ----------- |
 | `file_name` | The name of the file to be installed |
@@ -70,6 +71,7 @@ any other kind of file. It only downloads the file, it does not extract, install
 or anything else.
 
 ### Parameters
+
 | Key | Description |
 | --- | ----------- |
 | `file_name` | The name of the file to be downloaded |
@@ -91,6 +93,7 @@ extracted to a new directory named as the `file_name` or `rename` in the
 Bottles' temp directory.
 
 ### Parameters
+
 | Key | Description |
 | --- | ----------- |
 | `file_name` | The name of the file to be downloaded |
@@ -112,6 +115,7 @@ This action is used to extract a Windows Cabinet, can also download it
 before extracting.
 
 ### Parameters
+
 | Key | Description |
 | --- | ----------- |
 | `file_name` | The name of the file to be downloaded |
@@ -144,6 +148,7 @@ to a bottle folder, **hardscripting this will result in a rejection by the team.
 This action is used to extract a file from a Windows Cabinet.
 
 ### Parameters
+
 | Key | Description |
 | --- | ----------- |
 | `source` | The path to the Windows Cabinet file |
