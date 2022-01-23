@@ -72,4 +72,4 @@ Steps:
   # urlAlt: http://web.archive.org/web/20210513223919/https://download.microsoft.com/download/8/4/A/84A35BF1-DAFE-4AE8-82AF-AD2AE20B6B14/directx_Jun2010_redist.exe
   file_checksum: 822e4c516600e81dc7fb16d9a77ec6d4
   dest: temp/directx_Jun2010_redist/
-
+```
