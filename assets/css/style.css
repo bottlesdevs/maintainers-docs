@@ -5,6 +5,25 @@
 @import url('https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css');
 @import url('https://usebottles.com/assets/css/style.css');
 
+body {
+    font-size: 18px;
+    line-height: 30px;
+}
+
+h1 {
+	font-size: 2em;
+}
+
+.container-lg > h1:first-child {
+    margin: 0 0 3rem 0;
+    font-size: 24px;
+}
+
+.highlighter-rouge {
+    background-color: #f3f3f3;
+    border-radius: 4px;
+    padding: 2px 8px;
+}
 
 .highlight table pre {
 	margin: 0
@@ -281,3 +300,4 @@
 .highlight {
 	background-color: #f8f8f8
 }
+
