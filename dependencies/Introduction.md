@@ -1,3 +1,8 @@
+---
+title: Dependencies
+description: Dependencies are the way Bottles extend your bottles compatibility.
+---
+
 # Dependencies
 These are packages which play a crucial role in Bottles, providing one 
 or more dependencies, necessary to make the Windows software to work, 

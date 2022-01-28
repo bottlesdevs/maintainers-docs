@@ -1,3 +1,8 @@
+---
+title: Dependencies structure
+description: Structure of an dependency manifest in Bottles.
+---
+
 # Dependencies structure
 We already introduced the dependencies structure in the Introduction, here we
 will go more in depth and explain the different parts of the dependency.

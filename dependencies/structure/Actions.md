@@ -1,3 +1,9 @@
+---
+title: Dependencies Actions
+description: These are the one step instruction type (which we have seen before), Bottles
+supports several and will certainly be extended in the future.
+---
+
 # Actions
 These are the one step instruction type (which we have seen before), Bottles
 supports several and will certainly be extended in the future. However, these

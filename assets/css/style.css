@@ -6,23 +6,73 @@
 @import url('https://usebottles.com/assets/css/style.css');
 
 body {
-    font-size: 18px;
-    line-height: 30px;
+	font-size: 18px;
+	line-height: 30px;
 }
 
 h1 {
 	font-size: 2em;
 }
 
-.container-lg > h1:first-child {
-    margin: 0 0 3rem 0;
-    font-size: 24px;
+aside li a.active {
+	color: #1c71d8;
+	font-weight: 600;
+}
+
+.container-lg>h1:first-child {
+	margin: 0 0 3rem 0;
+	font-size: 24px;
+}
+
+.container.has-sidebar {
+	display: grid;
+	grid-template-columns: 320px calc(100% - 340px);
+	gap: 20px;
+	align-items: start;
+}
+
+.container.has-sidebar aside {
+	margin: 4rem 0 0 0;
+	position: sticky;
+	top: 0;
+	max-height: 100vh;
+	overflow-y: auto;
+}
+
+.container.has-sidebar aside h2 {
+	font-size: 18px;
+	text-transform: uppercase;
+}
+
+.container.has-sidebar aside ul {
+	padding: 0;
+	margin: 0;
+	display: flex;
+	flex-direction: column;
+	gap: 5px;
+}
+
+aside li a.H3 {
+    margin: 0 0 0 15px;
+}
+
+aside li a.H4 {
+    margin: 0 0 0 30px;
+}
+
+.container.has-sidebar aside ul li a::before {
+    content: "• ";
+    margin: 0 5px 0 0;
+}
+
+.container.has-sidebar aside ul li a {
+	text-decoration: none;
 }
 
 .highlighter-rouge {
-    background-color: #f3f3f3;
-    border-radius: 4px;
-    padding: 2px 8px;
+	background-color: #f3f3f3;
+	border-radius: 4px;
+	padding: 2px 8px;
 }
 
 .highlight table pre {
@@ -300,4 +350,3 @@ h1 {
 .highlight {
 	background-color: #f8f8f8
 }
-

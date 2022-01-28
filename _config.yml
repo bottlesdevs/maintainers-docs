@@ -1,0 +1,15 @@
+title: maintainers-docs
+author: Bottles Developers
+email: mail@usebottles.com
+
+assets: /assets
+uploads: /uploads
+
+defaults:
+  - scope:
+      path: ""
+    values:
+      layout: "default"
+
+plugins:
+  - jekyll-feed
