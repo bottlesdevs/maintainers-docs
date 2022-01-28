@@ -216,7 +216,6 @@ References:
 | `dll` | The name of the DLL to be overridden |
 | `type` | The type of the override |
 
-
 #### Supported `type` values
 
 | Value |
@@ -243,6 +242,26 @@ Do not use the short `n/b/d` syntax, it will not work.
 - action: override_dll
   dll: ucrtbase
   type: native,builtin
+```
+
+## `uninstall`
+This action is used to uninstall a program from the bottle before proceeding
+with the dependency installation. It will look for the uninstaller UUID and
+run the uninstaller.
+
+This can be very useful for dependencies like dotnet* witch are not compatible
+with mono and require it to be uninstalled.
+
+### Parameters
+
+| Key | Description |
+| --- | ----------- |
+| `file_name` | The name of the program to be uninstalled |
+
+### Example
+```yaml
+- action: uninstall
+  file_name: Wine Mono
 ```
 
 
