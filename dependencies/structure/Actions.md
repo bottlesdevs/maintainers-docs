@@ -206,6 +206,9 @@ example using the `win64` and `win32` placeholders:
 ## `override_dll`
 This action is used to override a DLL in the bottle.
 
+References: 
+- [Wine User's Guide - DLL Overrides](https://wiki.winehq.org/Wine_User%27s_Guide#DLL_Overrides)
+
 ### Parameters
 
 | Key | Description |
