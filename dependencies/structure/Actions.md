@@ -203,4 +203,44 @@ example using the `win64` and `win32` placeholders:
   rename: d3dcompiler_43.dll
 ```
 
+## `override_dll`
+This action is used to override a DLL in the bottle.
+
+### Parameters
+
+| Key | Description |
+| --- | ----------- |
+| `dll` | The name of the DLL to be overridden |
+| `type` | The type of the override |
+
+
+#### Supported `type` values
+
+| Value |
+| ----- |
+| `native` |
+| `builtin` |
+| `disabled` |
+| `native,builtin` |
+| `builtin,native` |
+
+Do not use the short `n/b/d` syntax, it will not work.
+
+
+### Example
+```yaml
+- action: override_dll
+  dll: msvcp140
+  type: native,builtin
+
+- action: override_dll
+  dll: msvcr140
+  type: native,builtin
+
+- action: override_dll
+  dll: ucrtbase
+  type: native,builtin
+```
+
+
 > This page is not complete.
