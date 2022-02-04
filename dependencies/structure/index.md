@@ -1,5 +1,5 @@
 ---
-title: Dependencies structure
+title: Structure - Dependencies
 description: Structure of an dependency manifest in Bottles.
 ---
 

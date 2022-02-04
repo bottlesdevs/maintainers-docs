@@ -23,5 +23,5 @@ These documents explain how to write, test and submit new dependencies to Bottle
 - [Introduction](/dependencies/Introduction)
 - [Structure](/dependencies/structure/)
     - [Actions](/dependencies/structure/Actions)
-    - [Validation](/dependencies/structure/Validation)
 - [Testing](/dependencies/Testing)
+- [Publish](/dependencies/structure/Publish)

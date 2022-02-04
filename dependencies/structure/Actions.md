@@ -1,5 +1,5 @@
 ---
-title: Dependencies Actions
+title: Actions - Dependencies
 description: These are the one step instruction type (which we have seen before), Bottles
 supports several and will certainly be extended in the future.
 ---
