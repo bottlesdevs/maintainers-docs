@@ -288,6 +288,7 @@ This action is used to change the Windows version of the bottle.
   version: win10
 ```
 
+
 ## `use_windows`
 This action is used to set a Windows version for an executable.
 
@@ -299,6 +300,7 @@ Same as [`set_windows`](#set_windows) action.
 - action: use_windows
   version: win10
 ```
+
 
 ## `set_registry_key`
 This action is used to set a key in the bottle's registry (WINE Registry).
@@ -338,5 +340,51 @@ This action is used to set a key in the bottle's registry (WINE Registry).
   type: REG_SZ
 ```
 
+
+## `copy_file` or `copy_dll`
+This action is used to copy files from a source to a destination. It also
+supports wildcards to copy multiple files using patterns.
+
+> `copy_dll` is just an alias for `copy_file`.
+
+### Parameters
+
+| Key | Description |
+| --- | ----------- |
+| `file_name` | The name of the file to be copied (wildcards are supported) |
+| `url` | The path where the files are located |
+| `dest` | The destination path |
+
+#### Supported `dest` values
+The destination should start with one of the following placeholders:
+
+| Placeholder | Description |
+| ----------- | ----------- |
+| temp/ | Will be automatically replaced with the full path to the Bottles' temp directory |
+| win64/ | Will be automatically replaced with the full path to the windows/ system 64bit folder of the running bottle |
+| win32/ | Will be automatically replaced with the full path to the windows/ system 32bit folder of the running bottle |
+| windows/ | Will be automatically replaced with the full path to the windows/ folder of the running bottle |
+
+> **Note**: The `win64` and `win32` placeholders are extremely important, as 
+> they change according to the bottle's architecture. Windows (and WINE) 32bit 
+> use the system32 folder to store 32bit resources, while 64bit systems uses 
+> the system32 folder to store 64bit resources and syswow64 to store 32bit.
+
+If the destination does not start with one of the supported placeholders, it
+will fail with an error. It is not possible to extract a whole Windows Cabinet
+to a bottle folder, **hardscripting this will result in a rejection by the team.**
+
+### Example
+```yaml
+- action: copy_dll
+  file_name: '*.dll'
+  url: temp/faudio_20_07/faudio-20.07/x64
+  dest: win32
+  
+- action: copy_dll
+  file_name: '*.dll'
+  url: temp/faudio_20_07/faudio-20.07/x64
+  dest: win64
+```
 
 > This page is not complete.
