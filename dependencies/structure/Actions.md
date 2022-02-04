@@ -418,23 +418,22 @@ bottle `Windows/Fonts` folder.
 
 
 ## `register_font`
-This action is used to register a font replacement. It is useful to fake a font
-installation, replacing it with anothe font (like when one is under proprietary
-license and cannot be redistributed).
+This action is used to register a font in the bottle (WINE) registry so it
+cab be found by the runner.
 
 ### Parameters
 
 | Key | Description |
 | --- | ----------- |
-| `name` | The name of the font to be replaced |
-| `file` | The font (file name) to be used as replacement |
+| `name` | The name of the font |
+| `file` | The font file name (in `Windows/Fonts` path)|
 
 ### Example
 ```yaml
 - action: register_font
   name: Source Han Sans SC ExtraLight
   file: SourceHanSans.ttc
-  
+
 - action: register_font
   name: Source Han Sans SC Light
   file: SourceHanSans.ttc
@@ -444,5 +443,33 @@ license and cannot be redistributed).
   file: SourceHanSans.ttc
 ```
 
+
+## `replace_font`
+This action can be used to replace a font. It is useful to fake a font
+installation, replacing it with anothe font (like when one is under proprietary
+license and cannot be redistributed).
+
+### Parameters
+| Key | Description |
+| --- | ----------- |
+| `font` | The font to be used as replacement |
+| `replace` | The list of fonts to be replaced |
+
+### Example
+```yaml
+- action: replace_font
+  font: Source Han Sans SC
+  replace:
+  - Dengxian
+  - FangSong
+  - KaiTi
+  - Microsoft YaHei
+  - Microsoft YaHei UI
+  - NSimSun
+  - SimHei
+  - SimKai
+  - SimSun
+  - SimSun-ExtB
+```
 
 > This page is not complete.
