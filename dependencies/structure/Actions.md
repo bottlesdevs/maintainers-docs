@@ -24,6 +24,7 @@ dependencies steps.
 | `override_dll` | Override a DLL |
 | `uninstall` | Call an uninstaller by its name |
 | `set_windows` | Set the current Windows version |
+| `use_windows` | Set Windows version per executable |
 | `set_register_key` | Set a Windows registry key |
 | `copy_file` or `copy_dll` | Copy a file from one place to another |
 | `install_fonts` | Copy one or more fonts to the bottle windows/Fonts path |
@@ -33,7 +34,7 @@ dependencies steps.
 ## Common definitions
 ### Downloads and local files
 All actions that support a `url` key will download the file from that URL. This
-can also be used to define a local file (from the Bottles' temp folder). The
+can also be used to define a local file (from th|e Bottles' temp folder). The
 correct syntax to use the local file is:
 
 ```yaml
@@ -287,13 +288,55 @@ This action is used to change the Windows version of the bottle.
   version: win10
 ```
 
+## `use_windows`
+This action is used to set a Windows version for an executable.
+
+### Supported `version`
+Same as [`set_windows`](#set_windows) action.
+
+### Example
+```yaml
+- action: use_windows
+  version: win10
+```
+
+## `set_registry_key`
+This action is used to set a key in the bottle's registry (WINE Registry).
+
+### Parameters
+
+| Key | Description |
+| --- | ----------- |
+| `key` | The key to be set |
+| `value` | The value to be set |
+| `data` | The data to be set |
+| `type` | The type of the data to be set |
+
+#### Supported `type` values
+
+| Value | Description |
+| ----- | ----------- |
+| `REG_DWORD` | A 32-bit number |
+| `REG_SZ` | A string |
+| `REG_BINARY` | A binary |
+| `REG_MULTI_SZ` | A list of strings |
+| `REG_EXPAND_SZ` | A string with environment variables |
 
 
+### Example
+```yaml
+- action: set_register_key
+  key: HKLM\\Software\\Microsoft\\NET Framework Setup\\NDP\\v4\\Full
+  value: Install
+  data: '0001'
+  type: REG_DWORD
 
-
-
-
-
+- action: set_register_key
+  key: HKLM\\Software\\Microsoft\\NET Framework Setup\\NDP\\v4\\Full
+  value: Version
+  data: 4.0.30319
+  type: REG_SZ
+```
 
 
 > This page is not complete.
