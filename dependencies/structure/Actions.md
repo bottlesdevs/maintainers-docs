@@ -5,10 +5,13 @@ supports several and will certainly be extended in the future.
 ---
 
 # Actions
-These are the one step instruction type (which we have seen before), Bottles
-supports several and will certainly be extended in the future. However, these
-alone are not enough and require other parameters, sometimes common and other
-times specific to the action. We will cover them all in this documentation.
+These are the steps that must be performed to install a dependency (which we 
+have seen before), called Actions in the project language. Each action can 
+be of different types and each type requires different parameters. We will see 
+them all on this page.
+
+Bottles supports several actions and will certainly be extended in the future. 
+
 
 ## Actions table
 The following table lists all the actions that Bottles supports for
