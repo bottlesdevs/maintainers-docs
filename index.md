@@ -18,7 +18,7 @@ This documentation is for dependencies, installers, components maintainers.
     - [libbottles (not implemented)](https://dev-docs.usebottles.com/libbottles/)
 
 
-# Dependencies
+## Dependencies
 These documents explain how to write, test and submit new dependencies to Bottles' internal manager.
 - [Introduction](/dependencies/Introduction)
 - [Structure](/dependencies/structure/)
