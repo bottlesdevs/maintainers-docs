@@ -417,4 +417,32 @@ bottle `Windows/Fonts` folder.
 ```
 
 
+## `register_font`
+This action is used to register a font replacement. It is useful to fake a font
+installation, replacing it with anothe font (like when one is under proprietary
+license and cannot be redistributed).
+
+### Parameters
+
+| Key | Description |
+| --- | ----------- |
+| `name` | The name of the font to be replaced |
+| `file` | The font (file name) to be used as replacement |
+
+### Example
+```yaml
+- action: register_font
+  name: Source Han Sans SC ExtraLight
+  file: SourceHanSans.ttc
+  
+- action: register_font
+  name: Source Han Sans SC Light
+  file: SourceHanSans.ttc
+
+- action: register_font
+  name: Source Han Sans SC Normal
+  file: SourceHanSans.ttc
+```
+
+
 > This page is not complete.
