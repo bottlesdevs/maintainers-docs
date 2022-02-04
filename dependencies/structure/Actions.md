@@ -265,4 +265,35 @@ with mono and require it to be uninstalled.
 ```
 
 
+## `set_windows`
+This action is used to change the Windows version of the bottle.
+
+### Supported `version`
+
+| Value | Description |
+| ----- | ----------- |
+| `win10` | Windows 10 |
+| `win81` | Windows 8.1 |
+| `win8` | Windows 8 |
+| `win7` | Windows 7 |
+| `win2008r2` | Windows 2008 R2 |
+| `win2008` | Windows 2008 |
+| `win2003` | Windows 2003 |
+| `winxp` | Windows XP |
+
+### Example
+```yaml
+- action: set_windows
+  version: win10
+```
+
+
+
+
+
+
+
+
+
+
 > This page is not complete.
