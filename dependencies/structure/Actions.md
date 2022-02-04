@@ -355,6 +355,10 @@ supports wildcards to copy multiple files using patterns.
 | `url` | The path where the files are located |
 | `dest` | The destination path |
 
+> Note: the `url` key supports only files in the Bottles' temp path and 
+> should start with the `temp/` placeholder, as it will be replaced with
+> the full Bottles' temp path.
+
 #### Supported `dest` values
 The destination should start with one of the following placeholders:
 
