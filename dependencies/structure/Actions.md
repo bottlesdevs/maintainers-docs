@@ -471,5 +471,3 @@ license and cannot be redistributed).
   - SimSun
   - SimSun-ExtB
 ```
-
-> This page is not complete.
