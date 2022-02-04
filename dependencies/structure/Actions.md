@@ -352,7 +352,7 @@ supports wildcards to copy multiple files using patterns.
 | Key | Description |
 | --- | ----------- |
 | `file_name` | The name of the file to be copied (wildcards are supported) |
-| `url` | The path where the files are located |
+| `url` | The temp path where the files are located |
 | `dest` | The destination path |
 
 > Note: the `url` key supports only files in the Bottles' temp path and 
@@ -390,5 +390,31 @@ to a bottle folder, **hardscripting this will result in a rejection by the team.
   url: temp/faudio_20_07/faudio-20.07/x64
   dest: win64
 ```
+
+
+## `install_fonts`
+This action is used to install (copy) fonts from the temp path to the
+bottle `Windows/Fonts` folder.
+
+### Parameters
+
+| Key | Description |
+| --- | ----------- |
+| `url` | The temp path where the fonts are located |
+| `fonts` | The fonts to be installed |
+
+> Note: the `url` key supports only files in the Bottles' temp path and 
+> should start with the `temp/` placeholder, as it will be replaced with
+> the full Bottles' temp path.
+
+### Example
+```yaml
+- action: install_fonts
+  url: temp/SourceHanSans
+  fonts:
+  - SourceHanSans.ttc
+  - SourceHanSans2.ttc
+```
+
 
 > This page is not complete.
