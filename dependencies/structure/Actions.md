@@ -450,6 +450,7 @@ installation, replacing it with anothe font (like when one is under proprietary
 license and cannot be redistributed).
 
 ### Parameters
+
 | Key | Description |
 | --- | ----------- |
 | `font` | The font to be used as replacement |
