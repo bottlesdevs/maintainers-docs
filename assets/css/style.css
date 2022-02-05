@@ -4,6 +4,7 @@
 @import url('https://fonts.googleapis.com/css?family=Material+Icons|Material+Icons+Outlined|Material+Icons+Two+Tone|Material+Icons+Round|Material+Icons+Sharp');
 @import url('https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css');
 @import url('https://usebottles.com/assets/css/style.css');
+@import url('/assets/css/dark.css');
 
 body {
 	font-size: 18px;

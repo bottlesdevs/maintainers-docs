@@ -120,4 +120,3 @@ before this one.
 
 There are also more complex actions but we will not cover them here, refer
 to the [Actions](/dependencies/structure/Actions.md) page for more information.
-
