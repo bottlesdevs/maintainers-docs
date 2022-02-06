@@ -351,3 +351,14 @@ aside li a.H4 {
 .highlight {
 	background-color: #f8f8f8
 }
+
+@media screen and (max-width: 745px) {
+	.container.has-sidebar {
+		display: block;
+	}
+
+	.container.has-sidebar aside {
+		position: initial;
+		max-height: initial;
+	}
+}
