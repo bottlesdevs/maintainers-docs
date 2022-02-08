@@ -79,3 +79,36 @@ overlay setting.
     user:
       closebehavior: CloseBehavior_Close
 ```
+
+## `run_script`
+This action is used to define and run a shell script. It is useful to
+execute operations when an action is not provided by Bottles.
+
+> Note: this action should be used with caution, as it can be dangerous
+> to run arbitrary commands.
+
+### Parameters
+
+| Key | Description |
+| --- | ----------- |
+| `script` | The script to be executed |
+
+To avoid damage to a minimum, this action comes with some restrictions but 
+also with some placeholders to facilitate the creation of scripts.
+
+- accessing the `bottle.yml` will result in an error, use the `Parameters`
+  key instead
+- to get the bottle name use the `!bottle_name` placeholder
+- to get the bottle path use the `!bottle_path` placeholder
+- to get the bottle drive_c path use the `!bottle_drive` placeholder
+
+### Example
+```yaml
+- action: run_script
+  script: |
+    echo "Bottle is: !bottle_name"
+    echo "Bottle path:"
+    ls !bottle_path
+    echo "Bottle drive_c:"
+    ls !bottle_drive
+```
