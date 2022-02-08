@@ -47,6 +47,17 @@ Dependencies:
 - riched20
 - arial32
 - vcredist2015
+
+Parameters:
+  dxvk: true
+  esync: true
+  discrete_gpu: true
+  
+Executable:
+  name: Battle.net
+  icon: battlenet.png
+  file: Battle.net.exe
+  path: Program Files (x86)/Battle.net/Battle.net.exe
 ```
 
 In this example, the installer is named `battlenet`, the grade is `Gold`, the
@@ -55,6 +66,13 @@ needed bottle arch is `win64` and it depends on the following dependencies:
 - `riched20`
 - `arial32`
 - `vcredist2015`
+
+It also has the following parameters:
+- `dxvk`: set to `true` to enable DXVK
+- `esync`: set to `true` to switch to the Esync syncrhonization
+- `discrete_gpu`: set to `true` to enable discrete GPU if available
+
+Finally it configure an entry in the bottle programs list.
 
 ### Steps
 Like dependencies, each installer has a set of steps that must be executed
