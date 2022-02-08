@@ -34,7 +34,7 @@ Let's take some examples:
 - Epic Games Launcher  
   it requires some dependencies to works, so it is a good idea to make an
   installer for it.
-- Notepad++
+- Notepad++  
   it doesn't require any dependencies or tweaks, so an installer is not
   necessary.
 
