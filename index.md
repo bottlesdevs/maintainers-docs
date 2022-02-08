@@ -23,8 +23,8 @@ These documents explain how to write, test and submit new dependencies to Bottle
 - [Introduction](/dependencies/Introduction)
 - [Structure](/dependencies/structure/)
     - [Actions](/dependencies/structure/Actions)
-- [Testing](/dependencies/Testing)
-- [Publish](/dependencies/structure/Publish)
+- [Testing](/Testing)
+- [Publish](/Publish)
 
 
 ## Installers
@@ -32,4 +32,5 @@ These documents explain how to write, test and submit new Bottles installers.
 - [Introduction](/installers/Introduction)
 - [Structure](/installers/structure)
     - [Actions](/installers/structure/Actions)
-- [Testing](/dependencies/Testing)
+- [Testing](/Testing)
+- [Publish](/Publish)

@@ -1,12 +1,12 @@
 ---
-title: Publish - Dependencies
-description: How to propose a dependency for publishing in the Bottles repository.
+title: Publish - Dependencies and Installers
+description: How to propose a dependency or installer for publishing in the Bottles repository.
 ---
 
 # Publish
-If you are here it means that your dependency is working and you want to 
-publish it in the official repository and make many users happy. Thanks in 
-advance, we are really proud of you and your work, take a break before 
+If you are here it means that your dependency or installer is working and you 
+want to publish it in the official repository and make many users happy. Thanks 
+in advance, we are really proud of you and your work, take a break before 
 publishing because you deserve it.
 
 ## Getting started
