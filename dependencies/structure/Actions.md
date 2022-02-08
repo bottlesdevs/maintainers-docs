@@ -1,14 +1,11 @@
 ---
 title: Actions - Dependencies
-description: These are the one step instruction type (which we have seen before), Bottles
-supports several and will certainly be extended in the future.
+description: These are the actions supported in dependencies steps.
 ---
 
 # Actions
-These are the steps that must be performed to install a dependency (which we 
-have seen before), called Actions in the project language. Each action can 
-be of different types and each type requires different parameters. We will see 
-them all on this page.
+Each step has an action type, Bottles uses this to figure out what operation 
+to perform. Each of these determines a specific set of parameters.
 
 Bottles supports several actions and will certainly be extended in the future. 
 
