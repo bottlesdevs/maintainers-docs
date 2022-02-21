@@ -72,7 +72,11 @@ It also has the following parameters:
 - `esync`: set to `true` to switch to the Esync syncrhonization
 - `discrete_gpu`: set to `true` to enable discrete GPU if available
 
-Finally it configure an entry in the bottle programs list.
+Finally it configure the `Executable` and add a new entry in the bottle 
+programs list. The `path` key also support the `userdir/` placeholder, which
+will be automatically replaced by Bottles using the right user path, so use
+this if the executable is placed in the user directory (e.g. 
+`drive_c/users/john/AppData/Program/Program.exe`).
 
 ### Steps
 Like dependencies, each installer has a set of steps that must be executed
