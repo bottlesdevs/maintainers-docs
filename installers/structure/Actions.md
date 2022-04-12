@@ -31,11 +31,14 @@ This action is used to install an executable.
 | Key | Description |
 | --- | ----------- |
 | `file_name` | The name of the file to be installed |
-| `url` | The URL or path of the file to be downloaded |
+| `url` | The URL or path of the file to be downloaded (e.g. set it to `"local"` to ask the user for a local file) |
 | `rename` | The new name of the file if it must be renamed |
 | `file_checksum` | The checksum of the file (MD5) |
 | `arguments` | The arguments to be passed to the executable |
 | `environment` | The environment variables to be injected |
+
+> All local resources are collected by Bottles as first step and then
+> used by the installer when needed.
 
 ### Example
 ```yaml
