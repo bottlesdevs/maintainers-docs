@@ -119,4 +119,4 @@ is because dependencies can also depend on other dependencies, so the
 before this one. 
 
 There are also more complex actions but we will not cover them here, refer
-to the [Actions](/dependencies/structure/Actions.md) page for more information.
+to the [Actions](/dependencies/structure/Actions) page for more information.
