@@ -119,6 +119,8 @@ also with some placeholders to facilitate the creation of scripts.
 
 
 ## `run_winecommand`
+*Since 2022.4.28*
+
 This action is used to define a list of commands to be executed inside the
 prefix using the WineCommand interface.
 
