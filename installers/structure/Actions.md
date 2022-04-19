@@ -22,6 +22,7 @@ installers steps.
 | `install_exe` or `install_msi` | Install an executable |
 | `update_config` | Update a configuration file (yaml, json, ini) |
 | `run_script` | Run a shell script |
+| `run_winecommand` | Run a command using the WineCommand interface |
 
 ## `install_exe` or `install_msi`
 This action is used to install an executable.
@@ -114,4 +115,37 @@ also with some placeholders to facilitate the creation of scripts.
     ls !bottle_path
     echo "Bottle drive_c:"
     ls !bottle_drive
+```
+
+
+## `run_winecommand`
+This action is used to define a list of commands to be executed inside the
+prefix using the WineCommand interface.
+
+> Note: this action should be used with caution, as it can be dangerous
+> to run arbitrary commands.
+
+### Parameters
+
+| Key | Description |
+| --- | ----------- |
+| `commands` | The list of commands to be executed |
+
+Optionally, the following parameters can be used to configure the WineCommand
+per each command:
+
+| Key | Description |
+| --- | ----------- |
+| `minimal` | If set to true, the command will be executed in a minimal environment |
+| `arguments` | The arguments to be passed to the command |
+
+### Example
+```yaml
+- action: wine_winecommand
+  commands:
+    - command: start steam://install/39140
+      arguments: /S
+      minimal: true
+    - command: wineboot -u
+      minimal: true
 ```
