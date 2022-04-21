@@ -99,4 +99,5 @@ Steps:
   file_name: Battle.net-Setup-enUS.exe
   url: http://dist.blizzard.com/downloads/bna-installers/322d5bb9ae0318de3d4cde7641c96425/retail.1/Battle.net-Setup-enUS.exe
   file_checksum: e413dfc296c3701416e3fe5af45aedbf
+  # Downloading the file . . .
 ```

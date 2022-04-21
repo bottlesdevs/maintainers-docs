@@ -48,27 +48,29 @@ structure for more information.
 The second stage of testing is to test the dependency/installer using your 
 manifest.
 
+### Clone the local repository
 First, you need to make a local repository. You can create this in your own 
 but we recommend that you clone the git repository to ensure the structure 
 and have access to other dependencies/installers in case yours requires them:
 
-### for dependencies
+#### for dependencies
 ```bash
 git clone https://github.com/bottlesdevs/dependencies.git
 ```
 
-### for installers
+#### for installers
 ```bash
 git clone https://github.com/bottlesdevs/programs.git
 ```
 
-Then, place your manifest in the right folder:
+### Place manifests
+Place your manifest in the right folder:
 
-### for dependencies
+#### for dependencies
 - Essentials/
 - Fonts/
 
-### for installers
+#### for installers
 - Games/
 - Software/
 
@@ -80,17 +82,18 @@ package_name: # the file name of the manifest, should be the same of Name in the
   Category: Essentials # the category (should respect the category path where it is placed)
 ```
 
+### Launch bottles
 To use the local repository, you need to launch Bottles using the appropriate
 environment variable.
 
-### for dependencies
+#### for dependencies
 `LOCAL_DEPENDENCIES` pointing to your local repository:
 
 ```bash
 LOCAL_DEPENDENCIES=/path/to/dependencies/ flatpak run com.usebottles.bottles
 ```
 
-### for installers
+#### for installers
 `LOCAL_INSTALLERS` pointing to your local repository:
 
 ```bash
