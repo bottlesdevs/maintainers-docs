@@ -8,6 +8,22 @@ This documentation is for dependencies, installers, components maintainers.
 
 > If you are a user, please see the [User Documentation](https://docs.usebottles.com).
 
+## Dependencies
+These documents explain how to write new dependencies to Bottles' internal manager.
+- [Introduction](/dependencies/Introduction)
+- [Structure](/dependencies/structure/)
+    - [Actions](/dependencies/structure/Actions)
+
+## Installers
+These documents explain how to write new Bottles installers.
+- [Introduction](/installers/Introduction)
+- [Structure](/installers/structure)
+    - [Actions](/installers/structure/Actions)
+
+## Testing
+These documents explain how to test and submit Bottles' pathes made to Dependencies and Installers.
+- [Testing](/Testing)
+- [Publish](/Publish)
 
 ## Other documentation
 - [User documentation](https://docs.usebottles.com)
@@ -16,21 +32,3 @@ This documentation is for dependencies, installers, components maintainers.
     - [Wiki (In progress)](https://github.com/bottlesdevs/Bottles/wiki)
     - [libwine (not implemented)](https://dev-docs.usebottles.com/libwine/)
     - [libbottles (not implemented)](https://dev-docs.usebottles.com/libbottles/)
-
-
-## Dependencies
-These documents explain how to write, test and submit new dependencies to Bottles' internal manager.
-- [Introduction](/dependencies/Introduction)
-- [Structure](/dependencies/structure/)
-    - [Actions](/dependencies/structure/Actions)
-- [Testing](/Testing)
-- [Publish](/Publish)
-
-
-## Installers
-These documents explain how to write, test and submit new Bottles installers.
-- [Introduction](/installers/Introduction)
-- [Structure](/installers/structure)
-    - [Actions](/installers/structure/Actions)
-- [Testing](/Testing)
-- [Publish](/Publish)
