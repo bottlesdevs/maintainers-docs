@@ -37,6 +37,7 @@ This action is used to install an executable.
 | `file_checksum` | The checksum of the file (MD5) |
 | `arguments` | The arguments to be passed to the executable |
 | `environment` | The environment variables to be injected |
+| `monitoring` | A list of process names to wait before continue |
 
 > All local resources are collected by Bottles as first step and then
 > used by the installer when needed.
@@ -44,11 +45,13 @@ This action is used to install an executable.
 ### Example
 ```yaml
 Steps:
-- action: install_exe
-  file_name: UplayInstaller.exe
-  url: https://ubistatic3-a.akamaihd.net/orbit/launcher_installer/UplayInstaller.exe
-  file_checksum: 1c2d115033a6a5f422c2074a44ad23b9
-  arguments: /S
+- action: install_msi
+  file_name: Battle.net-Setup-enUS.exe
+  url: http://dist.blizzard.com/downloads/bna-installers/322d5bb9ae0318de3d4cde7641c96425/retail.1/Battle.net-Setup-enUS.exe
+  file_checksum: e413dfc296c3701416e3fe5af45aedbf
+  monitoring:
+    - Battle.net-Setup-enUS.exe
+    - Battle.net-Setup.exe
 ```
 
 ## `update_config`
