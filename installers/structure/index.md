@@ -37,35 +37,53 @@ and handle its requirements before proceeding with the installation. Let's see
 an example:
 
 ```yaml
-Name: battlenet
-Description: The official Blizzard Battle.net launcher.
-Grade: Gold
+Name: epicgamestore
+Description: The official Epic Games launcher.
+Grade: Platinum
 Arch: win64
 
 Dependencies:
+- d3dx9
 - msls31
 - riched20
-- arial32
+- allfonts
+- d3dcompiler_43
+- d3dcompiler_47
 - vcredist2015
 
 Parameters:
   dxvk: true
-  esync: true
+  sync: esync
   discrete_gpu: true
   
 Executable:
-  name: Battle.net
-  icon: battlenet.png
-  file: Battle.net.exe
-  path: Program Files (x86)/Battle.net/Battle.net.exe
+  name: Epic Games Store
+  icon: epicgamestore.svg
+  file: EpicGamesLauncher.exe
+  path: Program Files (x86)/Epic Games/Launcher/Portal/Binaries/Win32/EpicGamesLauncher.exe
+  arguments: -opengl -SkipBuildPatchPrereq
+  
+Steps:
+- action: install_msi
+  file_name: EpicGamesLauncherInstaller.msi
+  url: https://cdn.usebottles.com/programs/EpicGamesLauncherInstaller.msi
+  file_checksum: ebde67191bc1a483fd821daf8e01ce46
+  arguments: /q
+
+Checks:
+  files:
+    - Program Files (x86)/Epic Games/Launcher/Portal/Binaries/Win32/EpicGamesLauncher.exe
 ```
 
-In this example, the installer is named `battlenet`, the grade is `Gold`, the
+In this example, the installer is named `epicgamestore`, the grade is `Platinum`, the
 needed bottle arch is `win64` and it depends on the following dependencies:
-- `msls31`
-- `riched20`
-- `arial32`
-- `vcredist2015`
+- d3dx9
+- msls31
+- riched20
+- allfonts
+- d3dcompiler_43
+- d3dcompiler_47
+- vcredist2015
 
 It also has the following parameters:
 - `dxvk`: set to `true` to enable DXVK
@@ -77,6 +95,9 @@ programs list. The `path` key also support the `userdir/` placeholder, which
 will be automatically replaced by Bottles using the right user path, so use
 this if the executable is placed in the user directory (e.g. 
 `drive_c/users/john/AppData/Program/Program.exe`).
+
+This installer came with an optional `Checks` key, which can be used to look
+for one or more files, to ensure the installation was ended successfully.
 
 ### Steps
 Like dependencies, each installer has a set of steps that must be executed
