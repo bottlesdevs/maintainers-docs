@@ -25,6 +25,7 @@ dependencies steps.
 | `uninstall` | Call an uninstaller by its name |
 | `set_windows` | Set the current Windows version |
 | `use_windows` | Set Windows version per executable |
+| `register_dll` | Register one ore more DLL and ActiveX control |
 | `set_register_key` | Set a Windows registry key |
 | `copy_file` or `copy_dll` | Copy a file from one place to another |
 | `install_fonts` | Copy one or more fonts to the bottle windows/Fonts path |
@@ -299,6 +300,25 @@ Same as [`set_windows`](#set_windows) action.
 ```yaml
 - action: use_windows
   version: win10
+```
+
+
+## `register_dll`
+This action is used to register a DLL and ActiveX control in the bottle.
+
+### Parameters
+
+| Key | Description |
+| --- | ----------- |
+| `dlls` | The list of DLLs to be registered |
+
+
+### Example
+```yaml
+- action: register_dll
+  dlls:
+    - dsdmo.dll
+    - dsdmoprp.dll
 ```
 
 
