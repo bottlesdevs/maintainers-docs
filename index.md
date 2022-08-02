@@ -21,7 +21,7 @@ These documents explain how to write new Bottles installers.
     - [Actions](/installers/structure/Actions)
 
 ## Testing
-These documents explain how to test and submit Bottles' pathes made to Dependencies and Installers.
+These documents explain how to test and submit Bottles' patches made to Dependencies and Installers.
 - [Testing](/Testing)
 - [Publish](/Publish)
 
