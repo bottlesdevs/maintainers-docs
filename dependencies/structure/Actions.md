@@ -282,6 +282,8 @@ This action is used to change the Windows version of the bottle.
 | `win2008` | Windows 2008 |
 | `win2003` | Windows 2003 |
 | `winxp` | Windows XP |
+| `win98` | Windows 98 |
+| `win95` | Windows 95 |
 
 ### Example
 ```yaml
