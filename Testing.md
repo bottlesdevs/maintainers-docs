@@ -74,7 +74,7 @@ Place your manifest in the right folder:
 - Games/
 - Software/
 
-and update the `index.md` file with your dependency/installer:
+and update the `index.yml` file with your dependency/installer:
 
 ```yaml
 package_name: # the file name of the manifest, should be the same of Name in the manifest
