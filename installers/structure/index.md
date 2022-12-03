@@ -22,7 +22,7 @@ The header must provide the following keys:
 - `Name`: the name of the installer, it must be unique and normally it is the
   same as the name of main download file
 - `Description`: this is a small description of the installer (e.g. for
-  epicgamestore it is "The official Blizzard Battle.net launcher")
+  epicgamestore it is "The official Epic Games launcher.")
 - `Grade`: the grade of compatibility of the installer (Bronze, Silver, Gold, 
   Platinum) this should be set to Undefined and updated by the maintainer
   according to the Final grade defined in the review (we will see it later)
