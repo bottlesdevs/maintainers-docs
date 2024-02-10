@@ -324,7 +324,7 @@ This action is used to register a DLL and ActiveX control in the bottle.
 ```
 
 
-## `set_registry_key`
+## `set_register_key`
 This action is used to set a key in the bottle's registry (WINE Registry).
 
 ### Parameters
