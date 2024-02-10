@@ -146,7 +146,7 @@ per each command:
 
 ### Example
 ```yaml
-- action: wine_winecommand
+- action: run_winecommand
   commands:
     - command: start steam://install/39140
       arguments: /S
