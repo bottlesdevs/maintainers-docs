@@ -24,8 +24,7 @@ The header must provide the following keys:
 - `Description`: this is a small description of the installer (e.g. for
   epicgamestore it is "The official Epic Games launcher.")
 - `Grade`: the grade of compatibility of the installer (Bronze, Silver, Gold, 
-  Platinum) this should be set to Undefined and updated by the maintainer
-  according to the Final grade defined in the review (we will see it later)
+  Platinum). If you don't know what grade to give a program, select Bronze.
 - `Arch`: the architecture of the bottle (win32, win64)
 - `Dependencies`: a list of dependencies that this installer depends on
 - `Parameters`: a list of parameters to be set in the bottle configuration
