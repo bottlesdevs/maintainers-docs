@@ -7,7 +7,7 @@ description: Installers are the way to automate the installation of the software
 Introduced in Bottles 2022.2.14, installers are set of rules which Bottles uses
 to automate the installation of the softwares. They define the required
 dependencies, tweaks and other things to install a software. We call them
-Actions and they are defined in the [Actions](/installers/Actions) section.
+Actions and they are defined in the [Actions](/installers/structure/Actions) section.
 
 ## How Bottles handles installers?
 Bottles is not just another wineprefix manager, it comes with a set of
